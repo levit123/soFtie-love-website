@@ -5,6 +5,8 @@
     <title>soFtieラブ</title>
     <!--website style sheet-->
     <link rel="stylesheet" type="text/css" href="css/softie.css">
+    <!--website javascript-->
+    <script src="js/softie.js"></script>
     <!--bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!--8 bit font-->
@@ -17,13 +19,13 @@
 	    <a class="navbar-brand" href="#home">Home</a>
 	    <a class="navbar-brand" href="#about">About</a>
 	    <a class="navbar-brand" href="#discography">Discography</a>
-	    <a class="navbar-brand" href="https://soundcloud.com/softie_love">Soundcloud</a>
-	    <a class="navbar-brand" href="https://open.spotify.com/artist/2KDEZe6Bd68qxSYbxsRvim">Spotify</a>
+	    <a class="navbar-brand" href="#" onclick="OpenSoundcloud()">Soundcloud</a>
+	    <a class="navbar-brand" href="#" onclick="OpenSpotify()">Spotify</a>
 	  </div>
 	</nav>
 
 	<!--HEADER-->
-	<div id="#home">
+	<div id="home">
 		<div id="heading">
 			<img src="images/ikigai.jpg" id="ikigai">
 		</div>
@@ -33,22 +35,35 @@
 	<br>
 
 	<!--ABOUT-->
-	<div id="#about">
+	<div id="about">
 		<h3 class="softie-section-header">About soFtieラブ</h3>
 		<div class="box">
 			<p id="softie-text">I go by the name soFtieラブ or "softie love".
 				<span class="break1"></span>
 				I am a music producer and beatmaker based in the pacific northwest of America, and have been producing for about three years. I mainly produce boombap, lofi hip-hop, trap, and phonk.
+				<span class="break1"></span>
+				You can find all my music on Soundcloud. I have plenty of music on Spotify, Pandora, Apple Music, Amazon Music, and all other major streaming platforms, but my main hub for music is Soundcloud.
 			</p>
 		</div>
 	</div>
 	<!--END OF ABOUT-->
 
+	<br>
+
 	<!--DISCOGRAPHY-->
-	<div id="#discography">
+	<div id="discography">
 		<h3 class="softie-section-header">Discography</h3>
 		<div class="box">
-			<p id="softie-text">With a little over three years of production I have released several large beat tapes, as well as numerous singles and smaller EP's inbetween larger releases.
+			<p id="softie-text">With a little over three years of production I have released several large beat tapes, as well as numerous singles and smaller
+				EP's inbetween larger releases.
+				<span class="break2"></span>
+				Take a listen to some of my work!
+				<span class="break2"></span>
+				<img src="images/blondeboi1.jpg" class="disco-image1" onclick="OpenBlondeBoi()">
+				<img src="images/steamed_milk.jpg" class="disco-image2" onclick="OpenSteamedMilk()">
+				<img src="images/cigarette_kiss.jpg" class="disco-image2" onclick="OpenCigaretteKiss()">
+				<img src="images/clouds.png" class="disco-image1" onclick="OpenWhereCloudsGoToSleep()">
+			</p>
 		</div>
 	</div>
 	<!--END OF DISCOGRAPHY-->
