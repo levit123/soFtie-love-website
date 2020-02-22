@@ -7,6 +7,10 @@
     <link rel="stylesheet" type="text/css" href="css/softie.css">
     <!--website javascript-->
     <script src="js/softie.js"></script>
+    <!--javascript for the form validator used in the contact form-->
+    <script src="js/gen_validatorv4.js" type="text/javascript"></script>
+</head>
+
     <!--bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!--8 bit font-->
@@ -54,11 +58,11 @@
 	<div id="discography">
 		<h3 class="softie-section-header">Discography</h3>
 		<div class="box">
-			<p id="softie-text">With a little over three years of production I have released several large beat tapes, as well as numerous singles and smaller
-				EP's inbetween larger releases.
+			<p id="softie-text">With a little over three years of production I have released several large beat tapes, as well as numerous singles and smaller EP's inbetween larger releases.
 				<span class="break2"></span>
 				Take a listen to some of my work!
 				<span class="break2"></span>
+				<!--album cover images that open links to the albums in new tabs when clicked-->
 				<img src="images/blondeboi1.jpg" class="disco-image1" onclick="OpenBlondeBoi()">
 				<img src="images/steamed_milk.jpg" class="disco-image2" onclick="OpenSteamedMilk()">
 				<img src="images/cigarette_kiss.jpg" class="disco-image2" onclick="OpenCigaretteKiss()">
@@ -67,5 +71,34 @@
 		</div>
 	</div>
 	<!--END OF DISCOGRAPHY-->
+
+	<!--CONTACT-->
+	<div id="contact">
+		<h3 class="softie-section-header">Contact</h3>
+		<div class="box">
+			<p id="softie-text">Looking for a beat to use for a song? Want to collaborate on a music project? Or just have general questions? Send me an email using the form below!</p>
+			<!--contact form-->
+			<form method="post" name="contactform" action="contact-form-handler.php">
+				Your Name (Artist name is fine too)
+				<input type="text" name="name">
+
+				Email Address
+				<input type="text" name="email">
+
+				Message
+				<textarea name="message"></textarea>
+
+				<input type="submit" Value="Submit">
+			</form>
+
+			<!--form validation script-->
+			<script language="JavaScript">
+				var frmvalidator  = new Validator("contactform");
+				frmvalidator.addValidation("name","req","Please provide your name");
+				frmvalidator.addValidation("email","req","Please provide your email");
+				frmvalidator.addValidation("email","email", "Please enter a valid email address");
+			</script>
+		</div>
+	</div>
 </body>
 </html>
