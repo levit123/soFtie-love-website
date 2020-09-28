@@ -16,10 +16,20 @@ function OpenWhereCloudsGoToSleep() {
 	window.open("https://soundcloud.com/softie_love/sets/where-clouds-go-to-sleep-full-beattape");
 }
 
+/*functions for opening social media pages*/
+
 function OpenSoundcloud() {
 	window.open("https://soundcloud.com/softie_love");
 }
 
 function OpenSpotify() {
 	window.open("https://open.spotify.com/artist/2KDEZe6Bd68qxSYbxsRvim");
+}
+
+function OpenTwitter() {
+	window.open("https://twitter.com/soFtie_love");
+}
+
+function OpenInstagram() {
+	window.open("https://www.instagram.com/softie_love_beats/")
 }

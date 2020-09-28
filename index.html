@@ -18,11 +18,12 @@
 </head>
 <body>
 	<!--NAVBAR-->
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="softie-nav">
+	<nav class="navbar navbar-expand navbar-dark bg-dark" id="softie-nav">
 	  <div class="container">
 	    <a class="navbar-brand" href="#home">Home</a>
 	    <a class="navbar-brand" href="#about">About</a>
 	    <a class="navbar-brand" href="#discography">Discography</a>
+	    <a class="navbar-brand" href="#social">Social</a>
 	    <a class="navbar-brand" href="#" onclick="OpenSoundcloud()">Soundcloud</a>
 	    <a class="navbar-brand" href="#" onclick="OpenSpotify()">Spotify</a>
 	  </div>
@@ -59,38 +60,62 @@
 		<h3 class="softie-section-header">Discography</h3>
 		<div class="box">
 			<p id="softie-text">With a little over three years of production I have released several large beat tapes, as well as numerous singles and smaller EP's inbetween larger releases.
-				<span class="break2"></span>
-				Take a listen to some of my work!
-				<span class="break2"></span>
-				<!--album cover images that open links to the albums in new tabs when clicked-->
+			<span class="break2"></span>
+			Take a listen to some of my work!</p>
+			<span class="break2"></span>
+			<!--album cover images that open links to the albums in new tabs when clicked-->
+			<center>
 				<img src="images/blondeboi1.jpg" class="disco-image1" onclick="OpenBlondeBoi()">
 				<img src="images/steamed_milk.jpg" class="disco-image2" onclick="OpenSteamedMilk()">
 				<img src="images/cigarette_kiss.jpg" class="disco-image2" onclick="OpenCigaretteKiss()">
 				<img src="images/clouds.png" class="disco-image1" onclick="OpenWhereCloudsGoToSleep()">
-			</p>
+			</center>
 		</div>
 	</div>
 	<!--END OF DISCOGRAPHY-->
 
+	<!--SOCIAL MEDIA-->
+	<div id="social">
+		<h3 class="softie-section-header">Social Media</h3>
+		<div class="box">
+			<p id="softie-text">Check out my music on Soundcloud and Spotify. Follow updates and advice on music, as well as shitposts that look like a psychopath wrote them, on my Twitter. Check out my Instagram for regular previews of my music as well as funny IRL photos.</p>
+			<span class="break2"></span>
+			<!--Social media logos that open links to my social media pages when clicked-->
+			<center>
+				<img src="images/soundcloud.png" class="social-image1" onclick="OpenSoundcloud()">
+				<img src="images/spotify.png" class="social-image1" onclick="OpenSpotify()">
+				<img src="images/twitter.png" class="social-image1" onclick="OpenTwitter()">
+				<img src="images/instagram.png" class="social-image1" onclick="OpenInstagram()">
+			</center>
+		</div>
+	</div>
 	<!--CONTACT-->
 	<div id="contact">
 		<h3 class="softie-section-header">Contact</h3>
 		<div class="box">
 			<p id="softie-text">Looking for a beat to use for a song? Want to collaborate on a music project? Or just have general questions? Send me an email using the form below!</p>
 			<!--contact form-->
-			<form method="post" name="contactform" action="contact-form-handler.php">
-				Your Name (Artist name is fine too)
-				<input type="text" name="name">
+			<center>
+				<form method="post" name="contactform" action="contact-form-handler.php">
+					<!--bootstrap component for the Name-->
+					<div class="form-group">
+						<label for="InputName"><b>Your Name (Artist name is fine too)</b></label>
+						<input class="form-control" id="InputName" type="text" name="name">
+					</div>
+					<!--bootstrap component for the Email-->
+					<div class="form-group">
+						<label for="InputEmail"><b>Email Address</b></label>
+						<input class="form-control" id="InputEmail" type="text" name="email">
+					</div>
+					<!--bootstrap component for the Message-->
+					<div class="form-group">
+						<label for="InputMessage"><b>Message</b></label>
+						<textarea class="form-control" id="InputMessage" name="message"></textarea>
+					</div>
 
-				Email Address
-				<input type="text" name="email">
-
-				Message
-				<textarea name="message"></textarea>
-
-				<input type="submit" Value="Submit">
-			</form>
-
+					<input type="submit" class="btn btn-primary" Value="Submit">
+				</form>
+			</center>
 			<!--form validation script-->
 			<script language="JavaScript">
 				var frmvalidator  = new Validator("contactform");
@@ -100,5 +125,6 @@
 			</script>
 		</div>
 	</div>
+	<!--END OF CONTACT-->
 </body>
 </html>

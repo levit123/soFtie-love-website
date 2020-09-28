@@ -103,6 +103,29 @@ body {
     transition-duration: 0.2s;
 }
 
+/*styling for the Social Media images*/
+.social-image1 {
+	height: 15%;
+	width: 15%;
+	border-style: groove;
+	border-width: 5px;
+	border-radius: 10px;
+	border-color: lightgray;
+}
+
+.social-image1:hover {
+	width: 20%;
+	height: 20%;
+	-webkit-transition-duration: 0.2s;
+	transition-duration: 0.2s;
+}
+
+/*styling for the <input> and <textarea> bootstrap components of the contact form*/
+.form-control {
+	max-width: 50%;
+	max-height: 300%;
+}
+
 /*custom span classes that serves as line breaks with a specific height*/
 .break1 {
 	display: block;
